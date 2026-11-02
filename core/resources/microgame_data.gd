@@ -1,11 +1,10 @@
-extends Node
+extends Resource
+class_name MicrogameData
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+@export var id: String = ""
+@export var title: String = ""
+@export var command_text: String = "¡JUEGA!"
+@export var story_id: String = "historia_1" 
+@export var is_boss: bool = false
+@export var base_duration: float = 4.0
+@export var scene: PackedScene

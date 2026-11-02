@@ -1,3 +1,134 @@
 [gd_scene format=3 uid="uid://csti2u84xgwh4"]
 
+[ext_resource type="Script" uid="uid://ckm2t7aicml2m" path="res://core/runner/microgame_runner.gd" id="1_6tp3u"]
+[ext_resource type="Texture2D" uid="uid://c86o0mju66bs1" path="res://assets/sprites/ui/heart.png" id="2_ldha8"]
+[ext_resource type="Texture2D" uid="uid://b5psstl57qioa" path="res://assets/sprites/ui/bombunder.png" id="3_ifsah"]
+[ext_resource type="Texture2D" uid="uid://c0t7w3hkjgq2o" path="res://assets/sprites/ui/bombover.png" id="4_2m8x1"]
+
 [node name="MicrogameRunner" type="Node2D" unique_id=1489816130]
+script = ExtResource("1_6tp3u")
+
+[node name="MicrogameViewport" type="Node2D" parent="." unique_id=1545250888]
+
+[node name="IntermissionLayer" type="CanvasLayer" parent="." unique_id=1868638696]
+layer = 5
+
+[node name="DoorsBackground" type="ColorRect" parent="IntermissionLayer" unique_id=661088382]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.1584723, 0.15847233, 0.1584723, 1)
+
+[node name="LivesContainer" type="HBoxContainer" parent="IntermissionLayer" unique_id=103957955]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 160.0
+offset_top = 47.0
+offset_right = -160.0
+offset_bottom = 207.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="IntermissionLayer/LivesContainer" unique_id=14288772]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_ldha8")
+
+[node name="TextureRect2" type="TextureRect" parent="IntermissionLayer/LivesContainer" unique_id=154193348]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_ldha8")
+
+[node name="TextureRect3" type="TextureRect" parent="IntermissionLayer/LivesContainer" unique_id=866858978]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_ldha8")
+
+[node name="TextureRect4" type="TextureRect" parent="IntermissionLayer/LivesContainer" unique_id=1537381963]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_ldha8")
+
+[node name="ScoreCounter" type="RichTextLabel" parent="IntermissionLayer" unique_id=1701706010]
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 0.50200003
+anchor_bottom = 1.0
+offset_top = -113.0
+offset_right = 0.4399414
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+bbcode_enabled = true
+
+[node name="StatusBanner" type="RichTextLabel" parent="IntermissionLayer" unique_id=1979952763]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -107.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+
+[node name="HUDLayer" type="CanvasLayer" parent="." unique_id=443958290]
+layer = 10
+
+[node name="CommandLabel" type="RichTextLabel" parent="HUDLayer" unique_id=1592630082]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -119.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 20
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+
+[node name="ControlIcon" type="TextureRect" parent="HUDLayer" unique_id=1297853302]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = -220.0
+offset_right = 89.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BombTimerBar" type="TextureProgressBar" parent="HUDLayer" unique_id=157717840]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = -142.0
+offset_right = -75.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+nine_patch_stretch = true
+texture_under = ExtResource("3_ifsah")
+texture_progress = ExtResource("4_2m8x1")
+
+[node name="RoundTimer" type="Timer" parent="." unique_id=697302645]
+
+[node name="StateTimer" type="Timer" parent="." unique_id=1568003432]

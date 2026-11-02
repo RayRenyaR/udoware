@@ -1,3 +1,10 @@
-[gd_resource type="Resource" format=3 uid="uid://cwnemi05tvfg2"]
+[gd_resource type="Resource" script_class="MicrogameRegistry" format=3 uid="uid://cwnemi05tvfg2"]
+
+[ext_resource type="Script" uid="uid://biwakedalowsd" path="res://core/resources/microgame_data.gd" id="1_ydnpa"]
+[ext_resource type="Resource" uid="uid://dh7lay0d0u2cl" path="res://microgames/dummies/dummy_win.tres" id="2_ryw53"]
+[ext_resource type="Resource" uid="uid://c13y6p5ateqro" path="res://microgames/dummies/dummy_lose.tres" id="3_440px"]
+[ext_resource type="Script" uid="uid://cej08dwcdneeb" path="res://core/template/microgame_registry.gd" id="4_gqwdw"]
 
 [resource]
+script = ExtResource("4_gqwdw")
+games = Array[ExtResource("1_ydnpa")]([ExtResource("2_ryw53"), ExtResource("3_440px")])

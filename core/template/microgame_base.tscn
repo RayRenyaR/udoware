@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://buvkokasx1yla"]
 
+[ext_resource type="Script" uid="uid://k5bo602k1fru" path="res://core/template/microgame_base.gd" id="1_rms76"]
+
 [node name="MicrogameBase" type="Node2D" unique_id=155754877]
+script = ExtResource("1_rms76")
+win_on_timeout = true
+
+[node name="BackgroundLayer" type="CanvasGroup" parent="." unique_id=79692624]
+
+[node name="Background" type="ColorRect" parent="BackgroundLayer" unique_id=1168758918]
+offset_left = -11.0
+offset_top = -11.0
+offset_right = 1297.0
+offset_bottom = 743.0
+metadata/_edit_use_anchors_ = true
+
+[node name="GameplayArea" type="Node2D" parent="." unique_id=990552895]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1164875088]
+anchor_mode = 0

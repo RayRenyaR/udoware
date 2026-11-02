@@ -80,15 +80,15 @@ El objetivo de esta fase es preparar las reglas del proyecto y la memoria persis
 
 #### Paso 1.1: Ajustes en `Project Settings`
 
-* [ ] **Resolución base:** En `Display -> Window`, configura el tamaño en `800 x 600` (o `1280 x 720` en proporción 16:9 si prefieren panorámico, asegurándose de que coincida con el tamaño del `<iframe />` de su `GameView.tsx` en React).
-* [ ] **Modo de escalado (Stretch):** Configura `Mode` en `canvas_items` y `Aspect` en `keep` para que el juego se adapte sin deformar los píxeles ni la interfaz.
-* [ ] **Mapa de Entradas (`Input Map`):** Aunque muchos juegos usan ratón o teclas específicas, registra acciones base: `action_click` (Botón Izquierdo del Ratón), `action_space` (Barra Espaciadora), y las direcciones `ui_up`, `ui_down`, `ui_left`, `ui_right` (WASD y Flechas).
+* [x] **Resolución base:** En `Display -> Window`, configura el tamaño en `800 x 600` (o `1280 x 720` en proporción 16:9 si prefieren panorámico, asegurándose de que coincida con el tamaño del `<iframe />` de su `GameView.tsx` en React).
+* [x] **Modo de escalado (Stretch):** Configura `Mode` en `canvas_items` y `Aspect` en `keep` para que el juego se adapte sin deformar los píxeles ni la interfaz.
+* [x] **Mapa de Entradas (`Input Map`):** Aunque muchos juegos usan ratón o teclas específicas, registra acciones base: `action_click` (Botón Izquierdo del Ratón), `action_space` (Barra Espaciadora), y las direcciones `ui_up`, `ui_down`, `ui_left`, `ui_right` (WASD y Flechas).
 
 #### Paso 1.2: Ficha Técnica de Microjuego (`core/resources/microgame_data.gd`)
 
-* [ ] Crea un script que herede de `Resource` con el nombre de clase `MicrogameData`.
-* [ ] **Propósito:** Servir como "carta de presentación" para cada uno de los 15 microjuegos sin tener que cargar la escena pesada en memoria antes de tiempo.
-* [ ] **Variables exportadas (`@export`) que debe tener:**
+* [x] Crea un script que herede de `Resource` con el nombre de clase `MicrogameData`.
+* [x] **Propósito:** Servir como "carta de presentación" para cada uno de los 15 microjuegos sin tener que cargar la escena pesada en memoria antes de tiempo.
+* [x] **Variables exportadas (`@export`) que debe tener:**
 * `id` (String): Identificador único (ej. `"mg_01_moscas"`).
 * `title` (String): Nombre interno del juego.
 * `command_text` (String): La palabra de orden que saldrá en gigante antes de empezar (ej. `"¡APLASTA!"`, `"¡AGITA!"`, `"¡TECLEA!"`).
@@ -103,8 +103,8 @@ El objetivo de esta fase es preparar las reglas del proyecto y la memoria persis
 
 #### Paso 1.3: Estado Global (`core/autoloads/global_state.gd`)
 
-* [ ] Crea este script heredando de `Node` y regístralo en `Project Settings -> Globals (Autoload)` como `GlobalState`.
-* [ ] **Variables de estado que debe controlar:**
+* [x] Crea este script heredando de `Node` y regístralo en `Project Settings -> Globals (Autoload)` como `GlobalState`.
+* [x] **Variables de estado que debe controlar:**
 * `current_mode`: Enum con `STORY` o `ARCADE`.
 * `selected_story`: Enum con `STORY_CLICK`, `STORY_MOUSE`, `STORY_KEYBOARD`.
 * `lives` (int): Inicia siempre en `4` al comenzar una partida.
@@ -119,7 +119,7 @@ El objetivo de esta fase es preparar las reglas del proyecto y la memoria persis
 * `microgame_pool` (Array de `MicrogameData`): Lista con los 15 recursos `.tres` registrados.
 
 
-* [ ] **Funciones que debe tener:**
+* [x] **Funciones que debe tener:**
 * Una función para reiniciar los valores al empezar partida (`reset_run()`).
 * Una función que filtre y devuelva los 5 microjuegos de la historia elegida (en Modo Historia) o baraje los 15 microjuegos de forma infinita sin repetir el inmediatamente anterior (en Modo Arcade).
 
@@ -127,9 +127,9 @@ El objetivo de esta fase es preparar las reglas del proyecto y la memoria persis
 
 #### Paso 1.4: Gestor de Audio (`core/autoloads/audio_manager.gd`)
 
-* [ ] Crea un script registrado como Autoload llamado `AudioManager`.
-* [ ] **Qué debe hacer:** Instanciar por código un nodo `AudioStreamPlayer` para la música (`BGM`) y un grupo de 4 nodos `AudioStreamPlayer` para efectos (`SFX`).
-* [ ] **Detalle clave de WarioWare:** Añade una función que actualice la propiedad `pitch_scale` de los reproductores de audio igualándola al `GlobalState.speed_scale` (o una fracción, como `1.0 + (speed_scale - 1.0) * 0.5`). Así, cuando ocurra un *Speed Up*, toda la música y los efectos sonarán más agudos y frenéticos automáticamente.
+* [x] Crea un script registrado como Autoload llamado `AudioManager`.
+* [x] **Qué debe hacer:** Instanciar por código un nodo `AudioStreamPlayer` para la música (`BGM`) y un grupo de 4 nodos `AudioStreamPlayer` para efectos (`SFX`).
+* [x] **Detalle clave de WarioWare:** Añade una función que actualice la propiedad `pitch_scale` de los reproductores de audio igualándola al `GlobalState.speed_scale` (o una fracción, como `1.0 + (speed_scale - 1.0) * 0.5`). Así, cuando ocurra un *Speed Up*, toda la música y los efectos sonarán más agudos y frenéticos automáticamente.
 
 ---
 
@@ -139,8 +139,8 @@ Antes de programar el contenedor de partidas, necesitas el "molde" del que nacer
 
 #### Paso 2.1: Estructura de `core/template/microgame_base.tscn`
 
-* [ ] Crea una escena cuyo nodo raíz sea un `Node2D` llamado `MicrogameBase` y asígnale el script `microgame_base.gd`.
-* [ ] **Nodos hijos que debe incluir:**
+* [x] Crea una escena cuyo nodo raíz sea un `Node2D` llamado `MicrogameBase` y asígnale el script `microgame_base.gd`.
+* [x] **Nodos hijos que debe incluir:**
 1. `Background` (`ColorRect` o `Sprite2D`): Fondo por defecto del tamaño de la pantalla para que ningún microjuego se vea transparente.
 2. `GameplayArea` (`Node2D`): Nodo vacío donde colocarás los sprites, colisiones y objetos propios de cada uno de los 15 microjuegos.
 3. `Camera2D`: Centrada en la pantalla por si algún microjuego necesita agitar la pantalla (*screen shake*).
@@ -149,11 +149,11 @@ Antes de programar el contenedor de partidas, necesitas el "molde" del que nacer
 
 #### Paso 2.2: Lógica de `core/template/microgame_base.gd`
 
-* [ ] **Señales que debe emitir hacia arriba:**
+* [x] **Señales que debe emitir hacia arriba:**
 * `signal microgame_finished(won: bool)`: Avisa inmediatamente si el jugador ya cumplió o falló la tarea.
 
 
-* [ ] **Variables internas:**
+* [x] **Variables internas:**
 * `has_won` (bool): Define el estado actual del microjuego.
 * `win_on_timeout` (bool, `@export`): ¡Muy importante! Hay dos tipos de microjuegos:
 * **Juegos de Acción (Por defecto `false`):** Empiezas perdiendo y debes lograr el objetivo antes de que acabe el tiempo (ej. aplastar las moscas). Si se acaba el tiempo y no lo lograste, pierdes vida.
@@ -162,7 +162,7 @@ Antes de programar el contenedor de partidas, necesitas el "molde" del que nacer
 
 
 
-* [ ] **Funciones estándar del molde:**
+* [x] **Funciones estándar del molde:**
 * `win()`: Marca `has_won = true`, reproduce una animación/sonido de victoria local y emite la señal.
 * `lose()`: Marca `has_won = false`, reproduce el fallo visual y emite la señal.
 * `on_time_up()`: Función que el controlador principal llamará cuando el reloj llegue a cero si el juego aún no se ha decidido.
@@ -171,12 +171,12 @@ Antes de programar el contenedor de partidas, necesitas el "molde" del que nacer
 
 #### Paso 2.3: Crear 2 Microjuegos de Prueba ("Dummies")
 
-* [ ] Antes de diseñar arte bizarro, crea dos escenas de prueba heredando de `MicrogameBase.tscn`:
+* [x] Antes de diseñar arte bizarro, crea dos escenas de prueba heredando de `MicrogameBase.tscn`:
 1. `dummy_win.tscn`: Con un simple botón `Button` en medio que al darle clic llame a `win()`.
 2. `dummy_lose.tscn`: Donde si no haces nada en 4 segundos, pierdes.
 
 
-* [ ] Crea sus dos archivos `.tres` (`MicrogameData`) para probar la Fase 3 sin distracciones.
+* [x] Crea sus dos archivos `.tres` (`MicrogameData`) para probar la Fase 3 sin distracciones.
 
 ---
 
@@ -266,8 +266,8 @@ Una vez que tu `MicrogameRunner` sea capaz de ciclar tus 2 microjuegos *Dummy*, 
 
 #### Paso 4.1: Menú Principal (`ui/main_menu/main_menu.tscn`)
 
-* [ ] **Nodo raíz:** `Control` con diseño de pantalla completa.
-* [ ] **Nodos hijos:**
+* [x] **Nodo raíz:** `Control` con diseño de pantalla completa.
+* [x] **Nodos hijos:**
 * `Background` (`TextureRect` o fondo animado con estética bizarra).
 * `TitleLogo` (`TextureRect` o `Label` con el logo de **UDOWare**).
 * `ButtonsVBox` (`VBoxContainer`):
@@ -280,26 +280,26 @@ Una vez que tu `MicrogameRunner` sea capaz de ciclar tus 2 microjuegos *Dummy*, 
 
 #### Paso 4.2: Selector de Historia (`ui/story_select/story_select.tscn`)
 
-* [ ] **Nodo raíz:** `Control`.
-* [ ] **Nodos hijos:** Un `HBoxContainer` con **3 Tarjetas/Botones grandes**, cada una representando una historia y su mecánica tutorial:
+* [x] **Nodo raíz:** `Control`.
+* [x] **Nodos hijos:** Un `HBoxContainer` con **3 Tarjetas/Botones grandes**, cada una representando una historia y su mecánica tutorial:
 1. **Historia 1 (Mecánica de Cliqueo):** Muestra el personaje de la primera historia + etiqueta `"Controles: Solo Clic"`.
 2. **Historia 2 (Mecánica de Movimiento de Ratón):** Muestra el segundo personaje + etiqueta `"Controles: Mover Cursor"`.
 3. **Historia 3 (Mecánica de Teclado):** Muestra el tercer personaje + etiqueta `"Controles: Teclado"`.
 
 
-* [ ] **Comportamiento:** Al elegir cualquiera de las 3, guarda `GlobalState.selected_story`, configura `GlobalState.current_mode = STORY` y abre `cutscene_player.tscn` en modo `INTRO`.
+* [x] **Comportamiento:** Al elegir cualquiera de las 3, guarda `GlobalState.selected_story`, configura `GlobalState.current_mode = STORY` y abre `cutscene_player.tscn` en modo `INTRO`.
 
 #### Paso 4.3: Reproductor de Cinemáticas (`ui/cutscenes/cutscene_player.tscn`)
 
-* [ ] Para no programar 6 escenas de cinemáticas distintas (3 intros + 3 finales), haz **un único reproductor basado en diapositivas o viñetas cómicas** (estilo cómic absurdo con efectos de sonido):
-* [ ] **Nodos de la escena:**
+* [x] Para no programar 6 escenas de cinemáticas distintas (3 intros + 3 finales), haz **un único reproductor basado en diapositivas o viñetas cómicas** (estilo cómic absurdo con efectos de sonido):
+* [x] **Nodos de la escena:**
 * `SlideImage` (`TextureRect`): Muestra el dibujo bizarro de la escena actual de la historia.
 * `DialogueBox` (`PanelContainer` + `RichTextLabel`): Muestra el texto gracioso de lo que le pasa al personaje.
 * `NextButton` (`Button`): Para avanzar de viñeta o saltar la cinemática (`"Saltar >>"`).
 * `AnimationPlayer`: Para dar rebotes (*squash and stretch*) o sacudidas a la imagen cuando pasa algo absurdo.
 
 
-* [ ] **Flujo:**
+* [x] **Flujo:**
 * Si estaba reproduciendo la **Intro**, al terminar la última viñeta carga `microgame_runner.tscn` con los 5 microjuegos de esa mecánica.
 * Si estaba reproduciendo el **Outro** (después de pasar el 5to microjuego/Jefe), al terminar felicita al jugador y lo devuelve a `story_select.tscn` marcando esa historia como completada.
 

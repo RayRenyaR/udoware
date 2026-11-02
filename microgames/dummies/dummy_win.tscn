@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bhx4geydlthu2"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_m1d54"]
+[ext_resource type="Script" uid="uid://da6ufjscjunj2" path="res://microgames/dummies/dummy_win.gd" id="2_f7vkr"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_m1d54")]
+script = ExtResource("2_f7vkr")
+win_on_timeout = false
+
+[node name="Button" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=1308025030]
+offset_left = 501.0
+offset_top = 322.0
+offset_right = 762.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 64
+text = "GANAR!"

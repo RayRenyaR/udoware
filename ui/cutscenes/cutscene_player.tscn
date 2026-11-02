@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bo7fuj2sevhg2"]
+
+[ext_resource type="Script" uid="uid://bv7bcqauypxhd" path="res://ui/cutscenes/cutscene_player.gd" id="1_wx10k"]
+
+[node name="CutscenePlayer" type="Control" unique_id=933353086]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wx10k")
+
+[node name="SlideImage" type="TextureRect" parent="." unique_id=1353924560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueBox" type="RichTextLabel" parent="." unique_id=1052403541]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -176.0
+grow_horizontal = 2
+grow_vertical = 0
+bbcode_enabled = true
+
+[node name="NextButton" type="Button" parent="." unique_id=864174932]
+layout_mode = 0
+offset_left = 1150.0
+offset_top = 252.0
+offset_right = 1261.0
+offset_bottom = 446.0
+
+[node name="SkipButton" type="Button" parent="." unique_id=1754588857]
+layout_mode = 0
+offset_left = 1143.0
+offset_top = 459.0
+offset_right = 1254.0
+offset_bottom = 546.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1727031272]

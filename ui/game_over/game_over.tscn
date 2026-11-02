@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://cwyjailuq5wa1"]
+
+[ext_resource type="Script" uid="uid://dvchborptnnfj" path="res://ui/game_over/game_over.gd" id="1_ns3eh"]
+
+[node name="GameOver" type="Control" unique_id=1894768197]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ns3eh")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1947835113]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="RichTextLabel" parent="." unique_id=326575428]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 207.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "[center]GAMEOVER"
+
+[node name="ScoreLabel" type="RichTextLabel" parent="." unique_id=82031389]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 173.0
+offset_bottom = 380.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "0000"
+
+[node name="StatusLabel" type="RichTextLabel" parent="." unique_id=209727427]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -7.0
+offset_top = 249.0
+offset_right = -7.0
+offset_bottom = 456.0
+grow_horizontal = 2
+theme_override_constants/shadow_offset_x = 20
+theme_override_constants/shadow_offset_y = 20
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "Guardando en el server"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=729827263]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -330.0
+offset_right = -4.0
+offset_bottom = -175.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="RetryButton" type="Button" parent="HBoxContainer" unique_id=896611851]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 64
+text = "REINTENTAR"
+
+[node name="MenuButton" type="Button" parent="HBoxContainer" unique_id=266718666]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 64
+text = "Menu"
+
+[node name="ScoreHTTPRequest" type="HTTPRequest" parent="." unique_id=361437698]

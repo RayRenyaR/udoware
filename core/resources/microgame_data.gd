@@ -1,3 +1,5 @@
+#MicrogameData
+#Todos los minijuegos tienen sus "metadatos"
 extends Resource
 class_name MicrogameData
 

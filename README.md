@@ -1,4 +1,15 @@
 ## HOLA
+El bucle del juego fue completado!!
+
+Pendientes actuales
+
+* [ ] **Independizar el network bridge:** Actualmente la conexion con el server se hace directamente en el codigo de la pantalla del gameover
+* [ ] **Revisar si funciona el envio al backend y la base de datos**
+* [ ] **Añadir el archivo de traducciones: ** Configurar el csv con los comandos y todo lo que sea texto por codigo traducible
+
+
+
+---
 
 La arquitectura para **UDOWare** en Godot 4 utiliza un **enfoque híbrido modular**: separa el motor central y los recursos reutilizables en carpetas globales, mientras encapsula cada uno de los 15 microjuegos en su propia subcarpeta para evitar mezclar decenas de scripts y escenas sueltas.
 
@@ -313,8 +324,8 @@ Cuando el jugador pierde sus 4 vidas (o decide salir tras registrar récord), en
 
 #### Paso 5.1: Escena `ui/game_over/game_over.tscn`
 
-* [ ] **Nodo raíz:** `Control`.
-* [ ] **Nodos hijos:**
+* [x] **Nodo raíz:** `Control`.
+* [x] **Nodos hijos:**
 * `GameOverTitle` (`Label`): `"¡GAME OVER!"`.
 * `FinalScoreLabel` (`Label`): Lee `GlobalState.score` y muestra `"Rondas superadas: X"`.
 * `ServerStatusLabel` (`Label`): Muestra el estado del envío a la base de datos (`"Enviando puntuación al servidor..."` -> `"¡Puntuación guardada en el Ranking!"` o `"Modo local: sin conexión al servidor"`).
@@ -328,7 +339,7 @@ Cuando el jugador pierde sus 4 vidas (o decide salir tras registrar récord), en
 
 #### Paso 5.2: Lógica de Envío en `game_over.gd` (y `network_bridge.gd`)
 
-* [ ] En la función `_ready()` de la pantalla de Game Over, si `GlobalState.score > 0`, arma un diccionario JSON con el puntaje obtenido, el modo jugado y el identificador del juego.
+* [x] En la función `_ready()` de la pantalla de Game Over, si `GlobalState.score > 0`, arma un diccionario JSON con el puntaje obtenido, el modo jugado y el identificador del juego.
 
 
 * [ ] Ejecuta la petición `ScoreHTTPRequest.request("http://localhost:8080/api/scores", headers, HTTPClient.Method.POST, json_body)`.

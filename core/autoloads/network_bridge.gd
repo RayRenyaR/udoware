@@ -1,3 +1,5 @@
+#NETWORK BRIDGE
+#Todo se dejo en la pantalla de gameover habria que revisar
 extends Node
 
 

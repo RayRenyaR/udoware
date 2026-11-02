@@ -1,3 +1,6 @@
+#MAINMENU
+#Controla el menu principal
+#Esta es la escena en la q el juego abre
 extends Control
 
 func _ready() -> void:

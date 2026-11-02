@@ -1,16 +1,21 @@
+#STORY SELECT
+#Menu de seleccion de historia
+#Luego habria q mejorar este menu
 extends Control
 
-# Conecta el botón de la historia 1 (Cliqueo) a esta función
+#Simpleemtne se conectan los botones para que acada uno llame a su histoira
 func _on_btn_story_click_pressed() -> void:
 	_start_story("dummy")
 
-# Conecta el botón de la historia 2 (Movimiento) a esta función
+
 func _on_btn_story_mouse_pressed() -> void:
 	_start_story("historia_2")
 
-# Conecta el botón de la historia 3 (Teclado) a esta función
+
 func _on_btn_story_keyboard_pressed() -> void:
 	_start_story("historia_3")
+
+#COomenzar una historia, configura los datos en el global y cambia a la cinematica
 
 func _start_story(story_id: String) -> void:
 	GlobalState.current_mode = GlobalState.Mode.STORY

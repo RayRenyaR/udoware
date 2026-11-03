@@ -3,8 +3,14 @@
 [ext_resource type="Script" uid="uid://biwakedalowsd" path="res://core/resources/microgame_data.gd" id="1_ydnpa"]
 [ext_resource type="Resource" uid="uid://dh7lay0d0u2cl" path="res://microgames/dummies/dummy_win.tres" id="2_ryw53"]
 [ext_resource type="Resource" uid="uid://c13y6p5ateqro" path="res://microgames/dummies/dummy_lose.tres" id="3_440px"]
+[ext_resource type="Resource" uid="uid://cbx5opwdcc343" path="res://microgames/mr_perros/01_pisa_moscas/01_pisa_moscas.tres" id="4_fm12a"]
 [ext_resource type="Script" uid="uid://cej08dwcdneeb" path="res://core/template/microgame_registry.gd" id="4_gqwdw"]
+[ext_resource type="Resource" uid="uid://jmxgctwluc3m" path="res://microgames/mr_perros/02_saca_mina/02_saca_mina.tres" id="5_r5lgx"]
+[ext_resource type="Resource" uid="uid://uucbe42aln1b" path="res://microgames/mr_perros/03_con_todo/03_con_todo.tres" id="6_tnd4e"]
+[ext_resource type="Resource" uid="uid://d1nhmkjexvtw8" path="res://microgames/mr_perros/04_cucarachas/04_cucarachas.tres" id="7_tyqut"]
+[ext_resource type="Resource" uid="uid://pph0yyhnlewu" path="res://microgames/mr_perros/05_pastillas/05_pastillas.tres" id="8_8epi4"]
+[ext_resource type="Resource" uid="uid://dxr1htlr4gws6" path="res://microgames/mr_perros/boss_perros/boss_perros.tres" id="9_cgrxy"]
 
 [resource]
 script = ExtResource("4_gqwdw")
-games = Array[ExtResource("1_ydnpa")]([ExtResource("2_ryw53"), ExtResource("3_440px")])
+games = Array[ExtResource("1_ydnpa")]([ExtResource("2_ryw53"), ExtResource("3_440px"), ExtResource("4_fm12a"), ExtResource("5_r5lgx"), ExtResource("6_tnd4e"), ExtResource("7_tyqut"), ExtResource("8_8epi4"), ExtResource("9_cgrxy")])

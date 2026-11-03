@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MicrogameData" format=3 uid="uid://jmxgctwluc3m"]
+
+[ext_resource type="PackedScene" uid="uid://bs1wai2okaq4k" path="res://microgames/mr_perros/02_saca_mina/02_saca_mina.tscn" id="1_750q5"]
+[ext_resource type="Script" uid="uid://biwakedalowsd" path="res://core/resources/microgame_data.gd" id="2_bvc5q"]
+
+[resource]
+script = ExtResource("2_bvc5q")
+id = "02_saca_mina"
+title = "Saca minas"
+command_text = "¡MACHUCALO!"
+story_id = "mr_perros"
+scene = ExtResource("1_750q5")

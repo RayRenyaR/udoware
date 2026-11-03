@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dyb3ml6mdurid"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_goift"]
+[ext_resource type="Script" uid="uid://byuw57pjqoovm" path="res://microgames/mr_perros/boss_perros/boss_perros.gd" id="2_e57m2"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_goift")]
+script = ExtResource("2_e57m2")
+
+[node name="PhaseLabel" type="RichTextLabel" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=762672357]
+offset_right = 1279.0
+offset_bottom = 117.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+
+[node name="BossMainBtn" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=1296633206]
+offset_left = 253.0
+offset_top = 429.0
+offset_right = 1058.0
+offset_bottom = 615.0
+
+[node name="BossFly1" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="2" unique_id=794800703]
+visible = false
+offset_left = 184.0
+offset_top = 303.0
+offset_right = 324.0
+offset_bottom = 408.0
+text = "Mosca"
+
+[node name="BossFly2" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="3" unique_id=2019412107]
+visible = false
+offset_left = 902.0
+offset_top = 312.0
+offset_right = 1042.0
+offset_bottom = 417.0
+text = "Mosca"

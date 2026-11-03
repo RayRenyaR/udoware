@@ -9,7 +9,7 @@ func _on_btn_story_click_pressed() -> void:
 
 
 func _on_btn_story_mouse_pressed() -> void:
-	_start_story("historia_2")
+	_start_story("mr_perros")
 
 
 func _on_btn_story_keyboard_pressed() -> void:

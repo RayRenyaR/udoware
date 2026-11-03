@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bs1wai2okaq4k"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_c0ejw"]
+[ext_resource type="Script" uid="uid://cl64h87414ulj" path="res://microgames/mr_perros/02_saca_mina/02_saca_mina.gd" id="2_jxu0m"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_c0ejw")]
+script = ExtResource("2_jxu0m")
+win_on_timeout = false
+
+[node name="ClickerButton" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=2050043438]
+offset_left = 143.0
+offset_top = 288.0
+offset_right = 348.0
+offset_bottom = 410.0
+text = "¡CLIC AQUÍ! (0/8)"
+
+[node name="LeadTip" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=900792938]
+offset_left = 385.0
+offset_top = 288.0
+offset_right = 1110.0
+offset_bottom = 414.0
+color = Color(0.7162962, 0.7162962, 0.7162962, 1)

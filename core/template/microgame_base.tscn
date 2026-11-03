@@ -4,7 +4,6 @@
 
 [node name="MicrogameBase" type="Node2D" unique_id=155754877]
 script = ExtResource("1_rms76")
-win_on_timeout = true
 
 [node name="BackgroundLayer" type="CanvasGroup" parent="." unique_id=79692624]
 

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://b03rx4tqa5v3q"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_n4jxl"]
+[ext_resource type="Script" uid="uid://dl7v5wwy30n2e" path="res://microgames/mr_perros/03_con_todo/03_con_todo.gd" id="2_lawjf"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_n4jxl")]
+script = ExtResource("2_lawjf")
+
+[node name="OrderLabel" type="RichTextLabel" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=575040053]
+offset_left = 408.0
+offset_top = 73.0
+offset_right = 696.0
+offset_bottom = 160.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+bbcode_enabled = true
+
+[node name="BtnKetchup" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=354104360]
+offset_left = 160.0
+offset_top = 401.0
+offset_right = 434.0
+offset_bottom = 531.0
+text = "salsa e tomate"
+
+[node name="BtnMustard" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="2" unique_id=1247045910]
+offset_left = 528.0
+offset_top = 399.0
+offset_right = 802.0
+offset_bottom = 529.0
+text = "mostaza"
+
+[node name="BtnMayo" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="3" unique_id=1831211531]
+offset_left = 898.0
+offset_top = 392.0
+offset_right = 1172.0
+offset_bottom = 522.0
+text = "mayoneise on the escalator
+"
+
+[node name="BtnTartara" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="4" unique_id=900161235]
+offset_left = 516.0
+offset_top = 557.0
+offset_right = 790.0
+offset_bottom = 687.0
+text = "la mejor salsa (tartara)"

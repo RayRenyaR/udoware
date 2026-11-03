@@ -3,7 +3,7 @@
 extends Node
 
 #Constantes
-const WINS_UNTIL_BOSS : int = 5
+const WINS_UNTIL_BOSS : int = 15
 
 #Enums
 enum Mode { STORY, ARCADE }

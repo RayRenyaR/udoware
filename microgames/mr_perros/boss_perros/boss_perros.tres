@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MicrogameData" format=3 uid="uid://dxr1htlr4gws6"]
+
+[ext_resource type="PackedScene" uid="uid://dyb3ml6mdurid" path="res://microgames/mr_perros/boss_perros/boss_perros.tscn" id="1_tfcfp"]
+[ext_resource type="Script" uid="uid://biwakedalowsd" path="res://core/resources/microgame_data.gd" id="2_sm0vs"]
+
+[resource]
+script = ExtResource("2_sm0vs")
+id = "boss_perros"
+title = "ULTARPERRO"
+command_text = "¡PREPARA!"
+story_id = "mr_perros"
+is_boss = true
+base_duration = 10.0
+scene = ExtResource("1_tfcfp")

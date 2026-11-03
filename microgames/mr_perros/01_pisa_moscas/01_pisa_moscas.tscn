@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://1ky8216f6lgo"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_s7wli"]
+[ext_resource type="Script" uid="uid://cswtqo31h2bx6" path="res://microgames/mr_perros/01_pisa_moscas/01_pisa_moscas.gd" id="2_l7c2s"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_s7wli")]
+script = ExtResource("2_l7c2s")
+win_on_timeout = false
+
+[node name="Fly1" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=2100316574]
+offset_left = 676.0
+offset_top = 342.0
+offset_right = 756.0
+offset_bottom = 422.0
+text = "mosca"
+
+[node name="Fly2" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=379990782]
+offset_left = 223.0
+offset_top = 377.0
+offset_right = 303.0
+offset_bottom = 457.0
+text = "mosca"
+
+[node name="Fly3" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="2" unique_id=1330842755]
+offset_left = 385.0
+offset_top = 183.0
+offset_right = 465.0
+offset_bottom = 263.0
+text = "mosca"

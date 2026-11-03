@@ -163,9 +163,8 @@ func change_state(new_state: State) -> void:
 			#Si completo los minijuegos del modo historia ov vencio al jefe
 			if GlobalState.current_mode == GlobalState.Mode.STORY:
 				var beat_boss: bool = current_game_won and current_game_data and current_game_data.is_boss
-				var completed_5_games: bool = (GlobalState.story_Wins_in_current_stage >= 5)
 				
-				if beat_boss or completed_5_games:
+				if beat_boss:
 					GlobalState.speed_scale = 1.0 # Restaurar velocidad normal para la cinematica
 					GlobalState.current_cutscene_type = GlobalState.CutsceneType.OUTRO
 					get_tree().change_scene_to_file("res://ui/cutscenes/cutscene_player.tscn")

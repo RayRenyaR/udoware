@@ -57,7 +57,7 @@ text = "DUMMY"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 64
-text = "MOUSE"
+text = "MR PERROS"
 
 [node name="BtnStoryKeyboard" type="Button" parent="HBoxContainer" unique_id=1676462271]
 layout_mode = 2

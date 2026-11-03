@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dvw6swaolav3f"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_g7dg1"]
+[ext_resource type="Script" uid="uid://0636fsaevq3r" path="res://microgames/mr_perros/05_pastillas/05_pastillas.gd" id="2_xix6j"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_g7dg1")]
+script = ExtResource("2_xix6j")
+
+[node name="WaterButton" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=1735969464]
+offset_left = 881.0
+offset_top = 448.0
+offset_right = 1248.0
+offset_bottom = 689.0
+text = "💧 Vaso de Agua (Clic x10)"
+
+[node name="PillRect" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=298737315]
+offset_left = 380.0
+offset_top = 80.0
+offset_right = 480.0
+offset_bottom = 180.0
+color = Color(1, 0, 1, 1)
+
+[node name="ThroatGoal" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="2" unique_id=1382906445]
+offset_left = 350.0
+offset_top = 420.0
+offset_right = 517.0
+offset_bottom = 494.0
+color = Color(0.4627451, 0.23529412, 0.28235295, 1)

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://wxk7ihy5whya"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_u5877"]
+[ext_resource type="Script" uid="uid://ya4cbeggsvif" path="res://microgames/mr_perros/04_cucarachas/04_cucarachas.gd" id="2_h3sai"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_u5877")]
+script = ExtResource("2_h3sai")
+
+[node name="RoachButton" type="Button" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=1385320021]
+offset_left = 50.0
+offset_top = 44.0
+offset_right = 140.0
+offset_bottom = 146.0
+text = "Cucaracha"

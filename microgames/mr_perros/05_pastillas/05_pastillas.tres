@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MicrogameData" format=3 uid="uid://pph0yyhnlewu"]
+
+[ext_resource type="Script" uid="uid://biwakedalowsd" path="res://core/resources/microgame_data.gd" id="1_fdvdy"]
+
+[resource]
+script = ExtResource("1_fdvdy")
+id = "05_pastillas"
+title = "Traga la patilla"
+command_text = "¡EMPUJA!"

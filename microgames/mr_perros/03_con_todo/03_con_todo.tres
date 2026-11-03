@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MicrogameData" format=3 uid="uid://uucbe42aln1b"]
+
+[ext_resource type="PackedScene" uid="uid://b03rx4tqa5v3q" path="res://microgames/mr_perros/03_con_todo/03_con_todo.tscn" id="1_32y2x"]
+[ext_resource type="Script" uid="uid://biwakedalowsd" path="res://core/resources/microgame_data.gd" id="2_3opb4"]
+
+[resource]
+script = ExtResource("2_3opb4")
+id = "03_con_todo"
+title = "Con todo"
+command_text = "¡ATIENDE!"
+story_id = "mr_perros"
+scene = ExtResource("1_32y2x")

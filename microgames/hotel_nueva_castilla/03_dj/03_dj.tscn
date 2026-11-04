@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://laevhunusxhs"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_spgd4"]
+[ext_resource type="Script" uid="uid://dkwm5cm2w4ian" path="res://microgames/hotel_nueva_castilla/03_dj/03_dj.gd" id="2_n68ex"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_spgd4")]
+script = ExtResource("2_n68ex")
+
+[node name="DirectionLabel" type="Label" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=579247156]
+offset_left = 333.0
+offset_top = 15.0
+offset_right = 915.0
+offset_bottom = 144.0
+
+[node name="Disc" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=977187466]
+offset_left = 404.0
+offset_top = 182.0
+offset_right = 811.0
+offset_bottom = 641.0
+pivot_offset = Vector2(120, 120)
+color = Color(0.32024416, 0.32024416, 0.32024413, 1)
+
+[node name="Marker" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="2" unique_id=297682416]
+offset_left = 320.0
+offset_top = 341.0
+offset_right = 402.0
+offset_bottom = 470.0
+color = Color(1, 0.3719598, 0.6541646, 1)

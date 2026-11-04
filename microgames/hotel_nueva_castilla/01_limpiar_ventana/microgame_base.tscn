@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://mya6s6hajp17"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_kaxxi"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_kaxxi")]

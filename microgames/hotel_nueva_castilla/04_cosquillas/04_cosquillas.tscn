@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cf05bixpblow5"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_wxxau"]
+[ext_resource type="Script" uid="uid://idacsnogbssv" path="res://microgames/hotel_nueva_castilla/04_cosquillas/04_cosquillas.gd" id="2_iprao"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_wxxau")]
+script = ExtResource("2_iprao")
+
+[node name="TickleZone" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=1548502012]
+offset_left = 417.0
+offset_top = 258.0
+offset_right = 800.0
+offset_bottom = 524.0
+color = Color(0.34580833, 0.4782248, 9.62615e-08, 1)
+
+[node name="IndicatorLabel" type="Label" parent="GameplayArea/TickleZone" index="0" unique_id=1984388530]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 99.0
+offset_right = 277.0
+offset_bottom = 159.0
+text = "fortaaa"

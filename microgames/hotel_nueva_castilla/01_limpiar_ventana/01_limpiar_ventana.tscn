@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c7o200n10um38"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_pd64a"]
+[ext_resource type="Script" uid="uid://biuj7qf8rnoha" path="res://microgames/hotel_nueva_castilla/01_limpiar_ventana/01_limpiar_ventana.gd" id="2_igie8"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_pd64a")]
+script = ExtResource("2_igie8")
+
+[node name="WindowFrame" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=1536631374]
+offset_left = 49.0
+offset_top = 49.0
+offset_right = 1222.0
+offset_bottom = 674.0
+color = Color(0.047058824, 1, 1, 1)
+
+[node name="ProgressLabel" type="Label" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=1464438272]
+offset_left = 381.0
+offset_top = 189.0
+offset_right = 900.0
+offset_bottom = 419.0

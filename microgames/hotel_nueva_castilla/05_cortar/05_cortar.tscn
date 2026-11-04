@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dsarknq0q67jq"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_5h7qg"]
+[ext_resource type="Script" uid="uid://jomjy663qnsq" path="res://microgames/hotel_nueva_castilla/05_cortar/05_cortar.gd" id="2_xdsgu"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_5h7qg")]
+script = ExtResource("2_xdsgu")
+
+[node name="CutGuide" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=77087833]
+offset_left = 234.0
+offset_top = 176.0
+offset_right = 311.0
+offset_bottom = 592.0
+color = Color(1, 1, 0, 1)
+
+[node name="CutLabel" type="Label" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=271352658]
+offset_left = 242.0
+offset_top = 251.0
+offset_right = 298.0
+offset_bottom = 407.0

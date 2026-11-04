@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b4iou523mnggo"]
+
+[ext_resource type="PackedScene" uid="uid://buvkokasx1yla" path="res://core/template/microgame_base.tscn" id="1_wf07i"]
+[ext_resource type="Script" uid="uid://dnmfu2me54sww" path="res://microgames/hotel_nueva_castilla/boss_hotel_nueva_castilla/jefe_hotel_nueva_castilla.gd" id="2_cs0mm"]
+
+[node name="MicrogameBase" unique_id=155754877 instance=ExtResource("1_wf07i")]
+script = ExtResource("2_cs0mm")
+
+[node name="Darkness" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="0" unique_id=1298790256]
+offset_right = 1278.0
+offset_bottom = 725.0
+color = Color(0, 0, 0, 1)
+
+[node name="Flashlight" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="1" unique_id=723351437]
+offset_left = 53.0
+offset_top = 64.0
+offset_right = 152.0
+offset_bottom = 155.0
+color = Color(1, 1, 0.65882355, 0.45490196)
+
+[node name="Monster" type="ColorRect" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="2" unique_id=8867009]
+offset_left = 242.0
+offset_top = 125.0
+offset_right = 387.0
+offset_bottom = 259.0
+color = Color(1, 0, 0, 1)
+
+[node name="StatusLabel" type="Label" parent="GameplayArea" parent_id_path=PackedInt32Array(990552895) index="3" unique_id=587351879]
+offset_left = 304.0
+offset_top = 17.0
+offset_right = 735.0
+offset_bottom = 126.0
